@@ -41,9 +41,12 @@ def create_deposit(sum: float, months: int, regular_replenishment: float = None)
             return total
 
         else:
-            increase_for_replenishment = regular_replenishment * (1 + customer_percent / 100 / 12)
-            replenishments_number = months - 2
-            return total + increase_for_replenishment * replenishments_number
+            total_increase = 0
+            month_till_the_end = months - 1
+            for _ in range(months - 2):
+                total_increase += regular_replenishment * (1 + customer_percent / 100 / 12 * month_till_the_end)
+                month_till_the_end -= 1
+            return total + total_increase
 
 
 if __name__ == '__main__':
