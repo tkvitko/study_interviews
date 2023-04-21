@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Goods list
+{% endblock %}
+{% block body %}
+    <a href="create" class="btn btn-primary">Add new</a>
+<br><br>
+    <h1>Goods list:</h1>
+    <br><br>
+    {% for good in goods %}
+        <ul>
+            Name: {{ good.name }} <br>
+            Price: {{ good.price }} <br>
+            Vendor: {{ good.vendor }} <br>
+        </ul>
+    {% endfor %}
+{% endblock %}
