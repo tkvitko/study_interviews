@@ -5,5 +5,14 @@ Goods list
 {% endblock %}
 {% block body %}
 <b>New good:</b>
-{% include "form.html" %}
+<form method="post" action="{% url 'create_good' %}" class="js-good-create-form">
+    {% csrf_token %}
+    <div class="modal-body">
+        {% include "form.html" %}
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary my-4" type="submit">Add</button>
+    </div>
+</form>
 {% endblock %}

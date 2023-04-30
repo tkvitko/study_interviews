@@ -1,0 +1,17 @@
+<!--{% for good in goods %}-->
+<!--<ul>-->
+<!--    Name: {{ good.name }} <br>-->
+<!--    Price: {{ good.price }} <br>-->
+<!--    Vendor: {{ good.vendor }} <br>-->
+<!--</ul>-->
+<!--{% endfor %}-->
+<tr>
+    <th>Название</th>
+    <th>Цена</th>
+</tr>
+{% for product in goods %}
+<tr>
+    <td>{{ product.name }}</td>
+    <td>{{ product.price }}</td>
+</tr>
+{% endfor %}
