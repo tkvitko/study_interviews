@@ -1,0 +1,11 @@
+asgiref==3.6.0
+backports.zoneinfo==0.2.1
+Django==4.2
+django-widget-tweaks==1.4.12
+greenlet==2.0.2
+PyQt5==5.15.9
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.12.1
+SQLAlchemy==2.0.10
+sqlparse==0.4.3
+typing_extensions==4.5.0
